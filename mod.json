@@ -10,7 +10,22 @@
 	"name": "Click Assist",
 	"version": "v1.0.0",
 	"developer": "maxiidevgd",
-	"description": "Perdona clicks un poco antes o despues del momento exacto.",
+	"description": "Buffer de click para practicar.",
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"default": true,
+			"name": "Activado"
+		},
+		"window": {
+			"type": "int",
+			"default": 50,
+			"min": 0,
+			"max": 150,
+			"name": "Ventana (ms)",
+			"description": "Cuanto antes de aterrizar se perdona el click."
+		}
+	},
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.3"
 	}
