@@ -8,9 +8,9 @@
 	},
 	"id": "maxiidevgd.click-assist",
 	"name": "Click Assist",
-	"version": "v1.0.0",
+	"version": "v1.1.0",
 	"developer": "maxiidevgd",
-	"description": "Buffer de click para practicar.",
+	"description": "Buffer de click y predictor experimental para practicar.",
 	"settings": {
 		"enabled": {
 			"type": "bool",
@@ -19,11 +19,33 @@
 		},
 		"window": {
 			"type": "int",
-			"default": 50,
+			"default": 80,
 			"min": 0,
-			"max": 150,
+			"max": 300,
 			"name": "Ventana (ms)",
 			"description": "Cuanto antes de aterrizar se perdona el click."
+		},
+		"predict": {
+			"type": "bool",
+			"default": false,
+			"name": "Predictor (experimental)",
+			"description": "Simula hacia adelante y corrige el click si vas a morir."
+		},
+		"lookahead": {
+			"type": "int",
+			"default": 40,
+			"min": 10,
+			"max": 120,
+			"name": "Pasos a predecir",
+			"description": "240 pasos = 1 segundo. Mas pasos = mas lag."
+		},
+		"interval": {
+			"type": "int",
+			"default": 3,
+			"min": 1,
+			"max": 10,
+			"name": "Cada cuantos pasos",
+			"description": "Mas alto = menos lag pero menos preciso."
 		}
 	},
 	"dependencies": {
