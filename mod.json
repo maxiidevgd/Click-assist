@@ -6,46 +6,136 @@
 		"mac": "2.2081",
 		"ios": "2.2081"
 	},
-	"id": "maxiidevgd.click-assist",
-	"name": "Click Assist",
-	"version": "v1.1.0",
+	"id": "maxiidevgd.maxi-menu",
+	"name": "Maxi Menu",
+	"version": "v1.2.0",
 	"developer": "maxiidevgd",
-	"description": "Buffer de click y predictor experimental para practicar.",
+	"description": "Menu de hacks para practicar.",
+	"tags": ["cheat"],
 	"settings": {
-		"enabled": {
-			"type": "bool",
-			"default": true,
-			"name": "Activado"
-		},
-		"window": {
-			"type": "int",
-			"default": 80,
-			"min": 0,
-			"max": 300,
-			"name": "Ventana (ms)",
-			"description": "Cuanto antes de aterrizar se perdona el click."
-		},
-		"predict": {
+		"noclip": {
 			"type": "bool",
 			"default": false,
-			"name": "Predictor (experimental)",
-			"description": "Simula hacia adelante y corrige el click si vas a morir."
+			"name": "Noclip",
+			"description": "No mueres al tocar obstaculos."
 		},
-		"lookahead": {
-			"type": "int",
-			"default": 40,
-			"min": 10,
-			"max": 120,
-			"name": "Pasos a predecir",
-			"description": "240 pasos = 1 segundo. Mas pasos = mas lag."
+		"noclip-spikes": {
+			"type": "bool",
+			"default": false,
+			"name": "Noclip solo picos",
+			"description": "Los picos no te matan, los bloques si."
 		},
-		"interval": {
+		"noclip-blocks": {
+			"type": "bool",
+			"default": false,
+			"name": "Noclip solo bloques",
+			"description": "Los bloques no te matan, los picos si."
+		},
+		"speed": {
+			"type": "float",
+			"default": 1.0,
+			"min": 0.1,
+			"max": 3.0,
+			"name": "Speedhack",
+			"description": "Velocidad del juego dentro de niveles. 1.0 es normal."
+		},
+		"speed-practice-only": {
+			"type": "bool",
+			"default": false,
+			"name": "Speedhack solo en practica"
+		},
+		"hitboxes": {
+			"type": "bool",
+			"default": false,
+			"name": "Mostrar hitboxes"
+		},
+		"instant-respawn": {
+			"type": "bool",
+			"default": false,
+			"name": "Respawn instantaneo"
+		},
+		"no-death-effect": {
+			"type": "bool",
+			"default": false,
+			"name": "Sin efecto de muerte"
+		},
+		"jump-hack": {
+			"type": "bool",
+			"default": false,
+			"name": "Jump hack",
+			"description": "Puedes saltar en el aire."
+		},
+		"unlock-icons": {
+			"type": "bool",
+			"default": false,
+			"name": "Desbloquear iconos y colores",
+			"description": "Muestra todo como desbloqueado."
+		},
+		"force-practice": {
+			"type": "bool",
+			"default": false,
+			"name": "Forzar modo practica"
+		},
+		"autoclick": {
+			"type": "bool",
+			"default": false,
+			"name": "Autoclick"
+		},
+		"cps": {
 			"type": "int",
-			"default": 3,
+			"default": 10,
 			"min": 1,
-			"max": 10,
-			"name": "Cada cuantos pasos",
-			"description": "Mas alto = menos lag pero menos preciso."
+			"max": 30,
+			"name": "CPS del autoclick"
+		},
+		"auto-hold": {
+			"type": "bool",
+			"default": false,
+			"name": "Mantener click automatico",
+			"description": "Mantiene el click apretado desde que empieza el intento."
+		},
+		"hide-p2": {
+			"type": "bool",
+			"default": false,
+			"name": "Ocultar jugador 2"
+		},
+		"player-opacity": {
+			"type": "int",
+			"default": 255,
+			"min": 0,
+			"max": 255,
+			"name": "Opacidad del jugador",
+			"description": "255 es normal, 0 es invisible."
+		},
+		"counter": {
+			"type": "bool",
+			"default": false,
+			"name": "Contador en pantalla",
+			"description": "Muestra intento, tiempo y muertes evitadas."
+		},
+		"watermark": {
+			"type": "bool",
+			"default": true,
+			"name": "Marca de trucos activos"
+		},
+		"mute-music": {
+			"type": "bool",
+			"default": false,
+			"name": "Silenciar musica"
+		},
+		"restart-at": {
+			"type": "int",
+			"default": 0,
+			"min": 0,
+			"max": 100,
+			"name": "Reiniciar al X%",
+			"description": "0 lo desactiva."
+		},
+		"safe-mode": {
+			"type": "bool",
+			"default": true,
+			"name": "Modo seguro",
+			"description": "Si usas trucos, el nivel completado no guarda progreso."
 		}
 	},
 	"dependencies": {
